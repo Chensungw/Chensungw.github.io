@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="shortcut icon" href="https://chensungw.github.io/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="温故而知新"><meta charset="UTF-8"><title>Hello Gridea | chensungw</title>
+<link rel="shortcut icon" href="https://chensungw.github.io/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="温故而知新"><meta charset="UTF-8"><title>Git 学习笔记 | chensungw</title>
 <link href="https://chensungw.github.io/styles/main.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://chensungw.github.io/media/css/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://chensungw.github.io/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
 <script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
-<link rel="canonical" href="https://chensungw.github.io/post/hello-gridea/" />
+<link rel="canonical" href="https://chensungw.github.io/post/git-xue-xi-bi-ji/" />
 </head>
 <body>
 <div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
@@ -22,37 +22,93 @@
 
 <div class="main"><div class="main-inner"><div class="content">
 <article class="post">
-<h2 class="post_title sm_margin"><a>Hello Gridea</a></h2>
+<h2 class="post_title sm_margin"><a>Git 学习笔记</a></h2>
 <script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
-<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2018-12-12</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px">	<a href="https://chensungw.github.io/tag/PvMW_oruo/" class="tag">Gridea</a></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">298字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">2 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2020-04-12</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px">	<a href="https://chensungw.github.io/tag/IUOk4FqUu/" class="tag">git</a> | 	<a href="https://chensungw.github.io/tag/SHs1J_uoBy/" class="tag">note</a></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">474字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">2 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
 </section>
-
-<img class="featureImg" alt="featureimg" src="https://chensungw.github.io/post-images/hello-gridea.png" referrerpolicy="no-referrer">
 
 <div style="display:flex">
 <div class="md_block" id="md_block">
 <div class="round-shape-one"></div>
-<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+<h2 id="1-git-命令">1. Git 命令</h2>
+<ul>
+<li>1.1 初始化一个Git仓库
+<ul>
+<li>在当前目录新建一个Git仓库:<br>
+<code>git init</code></li>
+<li>将一个目录初始化为Git仓库:<br>
+<code>git init [directory-name]</code></li>
+</ul>
+</li>
+<li>1.2 配置Git仓库
+<ul>
+<li>显示当前的Git配置:<br>
+<code>git config --list</code></li>
+<li>设置提交代码时的用户信息:<br>
+<code>git config [--global] user.name &quot;[name]&quot;</code><br>
+<code>git config [--global] user.email &quot;[email address]&quot;</code></li>
+</ul>
+</li>
+<li>1.3 增加 / 删除暂存区的文件
+<ul>
+<li>添加指定文件 / 目录到暂存区:<br>
+<code>git add [file1] [file2]</code></li>
+<li>添加当前目录的所有文件到暂存区:<br>
+<code>git add .</code></li>
+</ul>
+</li>
+<li>1.4 代码提交
+<ul>
+<li>把暂存区提交到仓库区:<br>
+<code>git commit -m [message]</code></li>
+<li>提交暂存区的指定文件到仓库区:<br>
+<code>git commit [file1] [file2] ... -m [message]</code></li>
+<li>更改文件名字，并且将这个改名放入暂存区:<br>
+<code>git mv [file-original] [file-renamed]</code></li>
+<li>更改最近一次的提交信息:<br>
+<code>git commit --amend</code></li>
+<li>更改任意一次的提交信息(lastcommit:修改信息的父亲commit):<br>
+<code>git rebase -i lastcommit</code></li>
+<li>恢复暂存区跟HEAD一样:<br>
+<code>git reset HEAD</code></li>
+<li>恢复工作区跟暂存区一样:<br>
+<code>git checkout -- [filename]</code></li>
+<li>重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致:<br>
+<code>git reset --hard [commit]=</code></li>
+<li>删除工作区文件，并且将这次删除放入暂存区:<br>
+<code>git rm [file1] [file2] ...</code></li>
+<li>暂时将未提交的变化移除，稍后再移入:<br>
+<code>git stash //移入</code><br>
+<code>git stash apply/pop //弹出</code></li>
+</ul>
+</li>
+<li>1.5 查看信息
+<ul>
+<li>git log 常用参数:
+<ul>
+<li>--oneline ：一次commit用一行显示</li>
+<li>--all ：显示所有分支</li>
+<li>--n [ number ] : 显示number次commit</li>
+<li>--graph ：图形化分支结构的关系</li>
+</ul>
+</li>
+<li>显示暂存区和工作区的代码差异:<br>
+<code>git diff</code></li>
+<li>显示暂存区和上一个commit的差异:<br>
+<code>git diff --cached [file]</code></li>
+</ul>
+</li>
+<li>1.6 分支
+<ul>
+<li>新建一个分支，但依然停留在当前分支:<br>
+<code>git branch [branch-name]</code></li>
+<li>新建一个分支，并切换到该分支:<br>
+<code>git checkout -b [branch]</code></li>
+<li>删除分支:<br>
+<code>git branch -d/-D [branch-name]</code></li>
+</ul>
+</li>
+</ul>
 
 <span id="footnote"></span>
 <div id = "warn"></div>
@@ -60,7 +116,7 @@
 <div class="toc-container"><ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E7%89%B9%E6%80%A7">特性👇</a></li>
+<li><a href="#1-git-%E5%91%BD%E4%BB%A4">1. Git 命令</a></li>
 </ul>
 </li>
 </ul>
@@ -81,7 +137,7 @@ if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop)
 var list=document.querySelectorAll(".katex");for(var i=0;i<list.length;i++){list[i].style.display="unset"};
 var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
 var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
-content="本文最后更新于2018-12-12，已超过 1 年没有更新，涉及的内容可能已经失效！";var date1="2018-12-12 00:00:00";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
+content="本文最后更新于2020-04-12，已超过 1 年没有更新，涉及的内容可能已经失效！";var date1="2020-04-12 21:33:06";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
 </script>
 <style>#magnifyImg{position:fixed;left:0;top:0;text-align:center;width:100%;display:none;z-index:9999}#magnifyImg img{object-fit:contain;background:#eaecef;padding:15px;border-radius:10px;height:auto;width:auto;vertical-align:middle}</style>
 <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"><a href="https://github.com/Chensungw"title="github"><i class="iconfont icon-github"></i></a><a href="953448445@qq.com"title="envelope"><i class="iconfont icon-envelope"></i></a></div></div><div class="copyright"id="copyright">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>Copyright © 2018-2020 <a href="https://chensungw.github.io" style="margin:0;">chensungw</a>.</div>
