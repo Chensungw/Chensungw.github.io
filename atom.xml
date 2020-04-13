@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://chensungw.github.io</id>
-    <title>chensungw</title>
-    <updated>2020-04-13T07:43:30.390Z</updated>
+    <title>Chensungw</title>
+    <updated>2020-04-13T07:47:08.055Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://chensungw.github.io"/>
     <link rel="self" href="https://chensungw.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://chensungw.github.io/images/avatar.png</logo>
     <icon>https://chensungw.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, chensungw</rights>
+    <rights>All rights reserved 2020, Chensungw</rights>
     <entry>
         <title type="html"><![CDATA[Git 学习笔记]]></title>
         <id>https://chensungw.github.io/post/git-xue-xi-bi-ji/</id>
