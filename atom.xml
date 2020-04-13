@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://chensungw.github.io</id>
     <title>chensungw</title>
-    <updated>2020-04-13T04:44:17.137Z</updated>
+    <updated>2020-04-13T07:37:42.251Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://chensungw.github.io"/>
     <link rel="self" href="https://chensungw.github.io/atom.xml"/>
@@ -16,22 +16,21 @@
         <link href="https://chensungw.github.io/post/git-xue-xi-bi-ji/">
         </link>
         <updated>2020-04-12T13:33:06.000Z</updated>
-        <summary type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://chensungw.github.io/post-images/1586752649175.png" alt="" loading="lazy"></figure>
-<ul>
+        <summary type="html"><![CDATA[<ul>
 <li>Workspace：工作区</li>
 <li>Index / Stage：暂存区</li>
 <li>Repository：仓库区（或本地仓库）</li>
 <li>Remote：远程仓库</li>
 </ul>
 ]]></summary>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://chensungw.github.io/post-images/1586752649175.png" alt="" loading="lazy"></figure>
-<ul>
+        <content type="html"><![CDATA[<ul>
 <li>Workspace：工作区</li>
 <li>Index / Stage：暂存区</li>
 <li>Repository：仓库区（或本地仓库）</li>
 <li>Remote：远程仓库</li>
 </ul>
 <!-- more -->
+<figure data-type="image" tabindex="1"><img src="https://chensungw.github.io/post-images/1586763454660.png" alt="" loading="lazy"></figure>
 <h1 id="1-git-命令">1. Git 命令</h1>
 <ul>
 <li>
