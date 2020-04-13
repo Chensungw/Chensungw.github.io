@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://chensungw.github.io</id>
     <title>chensungw</title>
-    <updated>2020-04-12T13:38:20.459Z</updated>
+    <updated>2020-04-13T04:44:17.137Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://chensungw.github.io"/>
     <link rel="self" href="https://chensungw.github.io/atom.xml"/>
@@ -16,61 +16,123 @@
         <link href="https://chensungw.github.io/post/git-xue-xi-bi-ji/">
         </link>
         <updated>2020-04-12T13:33:06.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="1-git-命令">1. Git 命令</h2>
+        <summary type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://chensungw.github.io/post-images/1586752649175.png" alt="" loading="lazy"></figure>
 <ul>
-<li>1.1 初始化一个Git仓库
+<li>Workspace：工作区</li>
+<li>Index / Stage：暂存区</li>
+<li>Repository：仓库区（或本地仓库）</li>
+<li>Remote：远程仓库</li>
+</ul>
+]]></summary>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://chensungw.github.io/post-images/1586752649175.png" alt="" loading="lazy"></figure>
+<ul>
+<li>Workspace：工作区</li>
+<li>Index / Stage：暂存区</li>
+<li>Repository：仓库区（或本地仓库）</li>
+<li>Remote：远程仓库</li>
+</ul>
+<!-- more -->
+<h1 id="1-git-命令">1. Git 命令</h1>
+<ul>
+<li>
+<p>1.1 初始化一个Git仓库</p>
 <ul>
 <li>在当前目录新建一个Git仓库:<br>
 <code>git init</code></li>
 <li>将一个目录初始化为Git仓库:<br>
 <code>git init [directory-name]</code></li>
+<li>下载一个项目：<br>
+<code>git clone [url]</code></li>
 </ul>
 </li>
-<li>1.2 配置Git仓库
+<li>
+<p>1.2 配置Git仓库</p>
 <ul>
-<li>显示当前的Git配置:<br>
-<code>git config --list</code></li>
-<li>设置提交代码时的用户信息:<br>
-<code>git config [--global] user.name &quot;[name]&quot;</code><br>
-<code>git config [--global] user.email &quot;[email address]&quot;</code></li>
+<li>
+<p>显示当前的Git配置:<br>
+<code>git config --list</code></p>
+</li>
+<li>
+<p>设置提交代码时的用户信息:</p>
+<pre><code class="language-bash">git config [--global] user.name &quot;[name]&quot;
+git config [--global] user.email &quot;[email address]&quot;
+</code></pre>
+</li>
 </ul>
 </li>
-<li>1.3 增加 / 删除暂存区的文件
+<li>
+<p>1.3 增加 / 删除暂存区的文件</p>
 <ul>
 <li>添加指定文件 / 目录到暂存区:<br>
-<code>git add [file1] [file2]</code></li>
+<code>git add [file1] / [dir]</code></li>
 <li>添加当前目录的所有文件到暂存区:<br>
 <code>git add .</code></li>
-</ul>
-</li>
-<li>1.4 代码提交
-<ul>
-<li>把暂存区提交到仓库区:<br>
-<code>git commit -m [message]</code></li>
-<li>提交暂存区的指定文件到仓库区:<br>
-<code>git commit [file1] [file2] ... -m [message]</code></li>
-<li>更改文件名字，并且将这个改名放入暂存区:<br>
-<code>git mv [file-original] [file-renamed]</code></li>
-<li>更改最近一次的提交信息:<br>
-<code>git commit --amend</code></li>
-<li>更改任意一次的提交信息(lastcommit:修改信息的父亲commit):<br>
-<code>git rebase -i lastcommit</code></li>
-<li>恢复暂存区跟HEAD一样:<br>
-<code>git reset HEAD</code></li>
-<li>恢复工作区跟暂存区一样:<br>
-<code>git checkout -- [filename]</code></li>
-<li>重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致:<br>
-<code>git reset --hard [commit]=</code></li>
-<li>删除工作区文件，并且将这次删除放入暂存区:<br>
+<li>删除工作区文件，并将这次删除放入暂存区：<br>
 <code>git rm [file1] [file2] ...</code></li>
-<li>暂时将未提交的变化移除，稍后再移入:<br>
-<code>git stash //移入</code><br>
-<code>git stash apply/pop //弹出</code></li>
+<li>改名文件，并将这个文件放入暂存区：<br>
+<code>git mv [file-original] [file-renamed]</code></li>
 </ul>
 </li>
-<li>1.5 查看信息
+<li>
+<p>1.4 代码提交</p>
 <ul>
-<li>git log 常用参数:
+<li>
+<p>把暂存区提交到仓库区:<br>
+<code>git commit -m [message]</code></p>
+</li>
+<li>
+<p>提交暂存区的指定文件到仓库区:<br>
+<code>git commit [file1] [file2] ... -m [message]</code></p>
+</li>
+<li>
+<p>提交工作区自上次commit之后的变化，直接到仓库区:<br>
+<code>git commit -a</code></p>
+</li>
+<li>
+<p>更改文件名字，并且将这个改名放入暂存区:<br>
+<code>git mv [file-original] [file-renamed]</code></p>
+</li>
+<li>
+<p>更改最近一次的提交信息:<br>
+<code>git commit --amend</code></p>
+</li>
+<li>
+<p>更改任意一次的提交信息(lastcommit:修改信息的父亲commit):<br>
+<code>git rebase -i lastcommit</code></p>
+</li>
+<li>
+<p>恢复暂存区跟HEAD一样:<br>
+<code>git reset HEAD</code></p>
+</li>
+<li>
+<p>恢复工作区跟暂存区一样:<br>
+<code>git checkout -- [filename]</code></p>
+</li>
+<li>
+<p>重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致:<br>
+<code>git reset --hard [commit]=</code></p>
+</li>
+<li>
+<p>删除工作区文件，并且将这次删除放入暂存区:<br>
+<code>git rm [file1] [file2] ...</code></p>
+</li>
+<li>
+<p>暂时将未提交的变化移除，稍后再移入:</p>
+<pre><code class="language-bash">git stash //移入
+git stash apply/pop  //弹出
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>1.5 查看信息</p>
+<ul>
+<li>
+<p>显示有变更的文件：<br>
+<code>git status</code></p>
+</li>
+<li>
+<p>显示当前分支的历史版本git log 常用参数:</p>
 <ul>
 <li>--oneline ：一次commit用一行显示</li>
 <li>--all ：显示所有分支</li>
@@ -78,23 +140,81 @@
 <li>--graph ：图形化分支结构的关系</li>
 </ul>
 </li>
-<li>显示暂存区和工作区的代码差异:<br>
-<code>git diff</code></li>
-<li>显示暂存区和上一个commit的差异:<br>
-<code>git diff --cached [file]</code></li>
+<li>
+<p>显示暂存区和工作区的代码差异:<br>
+<code>git diff</code></p>
+</li>
+<li>
+<p>显示暂存区和上一个commit的差异:<br>
+<code>git diff --cached [file]</code></p>
+</li>
 </ul>
 </li>
-<li>1.6 分支
+<li>
+<p>1.6 分支</p>
 <ul>
-<li>新建一个分支，但依然停留在当前分支:<br>
-<code>git branch [branch-name]</code></li>
-<li>新建一个分支，并切换到该分支:<br>
-<code>git checkout -b [branch]</code></li>
-<li>删除分支:<br>
-<code>git branch -d/-D [branch-name]</code></li>
+<li>
+<p>列出所有本地分支：<br>
+<code>git branch</code></p>
+</li>
+<li>
+<p>列出所有远程分支：<br>
+<code>git branch -r</code></p>
+</li>
+<li>
+<p>列出所有本地和远程分支：<br>
+<code>git branch -a</code></p>
+</li>
+<li>
+<p>新建一个分支，但依然停留在当前分支:<br>
+<code>git branch [branch-name]</code></p>
+</li>
+<li>
+<p>新建一个分支，并切换到该分支:<br>
+<code>git checkout -b [branch]</code></p>
+</li>
+<li>
+<p>删除分支:<br>
+<code>git branch -d/-D [branch-name]</code></p>
+</li>
+<li>
+<p>切换到指定分支，并更新工作区:<br>
+<code>git checkout [branch-name]</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>1.7 远程同步</p>
+<ul>
+<li>下载远程仓库的所有变动：<br>
+<code>git fetch [remote]</code></li>
+<li>增加一个新的远程仓库，并命名:<br>
+<code>git remote add [shortname] [url]</code></li>
+<li>取回远程仓库的变化，并与本地分支合并:<br>
+<code>git pull [remote] [branch]</code></li>
+<li>上传本地指定分支到远程仓库:<br>
+<code>git push [remote] [branch]</code></li>
+</ul>
+</li>
+<li>
+<p>1.8 撤销</p>
+<ul>
+<li>恢复暂存区的指定文件到工作区<br>
+<code>git checkout [file]</code></li>
+<li>重置暂存区的指定文件，与上一次commit保持一致，但工作区不变<br>
+<code>git reset [file]</code></li>
+</ul>
+</li>
+<li>
+<p>1.9 打包</p>
+<ul>
+<li>生成一个可供发布的压缩包<br>
+<code>git archive</code></li>
 </ul>
 </li>
 </ul>
+<!-- more -->
+<p>相关链接：<a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html">阮一峰的网络日志---常用 Git 命令清单</a></p>
 ]]></content>
     </entry>
     <entry>
